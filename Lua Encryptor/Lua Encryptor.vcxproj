@@ -88,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -102,6 +103,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -116,6 +118,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,6 +133,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="Compiler\Compiler.cpp" />
     <ClCompile Include="Encryptor\Encryptor.cpp" />
+    <ClCompile Include="LuaOpHelper\LuaOpHelper.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Utils\LuaMath.cpp" />
     <ClCompile Include="vendor\lua\lapi.c" />
@@ -180,7 +185,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Compiler\Compiler.h" />
+    <ClInclude Include="Dumper\Dumper.h" />
+    <ClInclude Include="Dumper\Structs.h" />
     <ClInclude Include="Encryptor\Encryptor.h" />
+    <ClInclude Include="LuaOpHelper\LuaOpHelper.h" />
+    <ClInclude Include="LuaOpHelper\OpFormatMap.h" />
     <ClInclude Include="Utils\Combine.h" />
     <ClInclude Include="Utils\LuaMath.h" />
     <ClInclude Include="Utils\Math.h" />

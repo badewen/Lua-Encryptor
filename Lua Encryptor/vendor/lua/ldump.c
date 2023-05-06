@@ -18,6 +18,7 @@
 #include "lstate.h"
 #include "lundump.h"
 
+#include <stdio.h>
 
 typedef struct {
   lua_State *L;
@@ -224,3 +225,15 @@ int luaU_dump(lua_State *L, const Proto *f, lua_Writer w, void *data,
   return D.status;
 }
 
+int luaU_dump_code(lua_State* L, const Proto* f, lua_Writer w,
+                  void* data, int strip) {
+    DumpState D;
+    D.L = L;
+    D.writer = w;
+    D.data = data;
+    D.strip = strip;
+    D.status = 0;
+
+    dumpCode(&D, f);
+    return D.status;
+}

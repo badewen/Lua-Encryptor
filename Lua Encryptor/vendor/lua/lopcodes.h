@@ -309,7 +309,6 @@ OP_VARARGPREP,/*A	(adjust vararg parameters)			*/
 OP_EXTRAARG/*	Ax	extra (larger) argument for previous opcode	*/
 } OpCode;
 
-
 #define NUM_OPCODES	((int)(OP_EXTRAARG) + 1)
 
 
