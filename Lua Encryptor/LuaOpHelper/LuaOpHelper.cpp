@@ -3,8 +3,8 @@
 #include <string>
 #include <sstream>
 
-#include "OpFormatMap.h"
 #include <lua/lopnames.h>
+#include <lua/lopcodes.h>
 
 OpMode LuaOpHelper::GetOpFormat(LuaInstruction inst)
 {
@@ -48,11 +48,12 @@ std::string LuaOpHelper::isJString(LuaInstruction inst)
 
 std::string LuaOpHelper::OpParameterString(LuaInstruction inst)
 {
-    OpMode opm = OpModeMap[GET_OPCODE(inst.RawInstruction)].second;
+    OpMode opm = getOpMode(GET_OPCODE(inst.RawInstruction));
     switch (opm)
     {
     case iABC:
         return iabcString(inst);
+
     case iABx:
         return iabxString(inst);
     case iAsBx:

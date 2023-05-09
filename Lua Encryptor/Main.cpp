@@ -14,10 +14,11 @@
 #include "LuaOpHelper/LuaOpHelper.h"
 
 const char* script = R"( 
+lmo = "OOP"
 a = {}
 a["uhuh"] = "babi"
 a[2] = "anjing"
-a["s"] = a;
+a[lmo] = a;
 )";
 const char* key = "WOasewqerqwerqwerW";
 
